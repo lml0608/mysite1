@@ -14,9 +14,17 @@
 <body>
 
 <h2>{{ time }}</h2>
+<p>{{ time|date:"Y-m-d"}}</p>
+<p>{{ test|capfirst }}</p>
+<p>{{ test2|cut:" " }}</p>
+<p>{{ num|add:1 }}</p>
+<p>{{ list2|default:'nihao' }}</p>
+<p>{{ list1|default:'nihao' }}</p>
 
-<p>{{ list1.0}}</p>
-<p>{{ user.name}}</p>
+<p>{{ a|addslashes}}</p>
+<p></p>
+
+
 
 
 <a href="/blog/article/2018/05/">链接</a>

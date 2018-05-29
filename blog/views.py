@@ -10,9 +10,18 @@ import datetime
 
 def index(request):
 
-    content = {'time':datetime.datetime.now()}
+    time = datetime.datetime.now()
 
-    return render(request,'blog/index.html',content)
+
+    test = "hello world!"
+    test2 = "h  ell   o wor ld!"
+    num = 10
+
+    list1 = []
+    list2 = False
+    a = "<a href=''>click</a>"
+
+    return render(request,'blog/index.html',locals())
 
 def article_year_month(request,year, month):
 
