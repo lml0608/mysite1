@@ -25,4 +25,12 @@ urlpatterns = [
     url(r'^delete2/$', views.delete2),
     url(r'^selectbook2/$', views.selectbook2),
 
+
+
+
+    url(r'^duoduiduo/$', views.duoduiduo),
+
+
+
+
 ]

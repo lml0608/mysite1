@@ -1,3 +1,4 @@
+{% load my_tags %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +14,9 @@
 </head>
 <body>
 
-<h2>{{ time }}</h2>
+{% with t=time%}
+<h2>t:{{ t }}</h2>
+{% endwith %}
 <p>{{ time|date:"Y-m-d"}}</p>
 <p>{{ test|capfirst }}</p>
 <p>{{ test2|cut:" " }}</p>
@@ -22,12 +25,20 @@
 <p>{{ list1|default:'nihao' }}</p>
 
 <p>{{ a|addslashes}}</p>
-<p></p>
+
+
+{% verbatim %}
+{{ hello }}
+{% endverbatim %}
 
 
 
 
 <a href="/blog/article/2018/05/">链接</a>
+
+{{ num|filter_multi:3 }}
+</br>
+{% simple_tag_multi 3 4 5 %}
 
 </body>
 </html>

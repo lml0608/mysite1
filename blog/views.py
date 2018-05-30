@@ -173,3 +173,31 @@ def register(request):
 
 
 
+#多对多
+def duoduiduo(requeust):
+
+    # book.obj = Book.objects.get(id=3)
+    #
+    # authors = book.obj.author.all()
+    #
+    # print(authors)
+    #
+    #
+    #
+    # author_obj = Author.objects.get(id=2)
+    #
+    # bk = author_obj.book_set.all()
+    #
+    # print(bk)
+
+    book_obj = Book.objects.get(id=4)
+
+    author_objs = Author.objects.all()
+
+    book_obj.author.remove(*author_objs)
+
+
+    return HttpResponse("HEEL")
+
+
+
